@@ -26,4 +26,5 @@ void DMA_InitCfg(void);
 void USART3_InitCfg(u32 bound);
 void UartSend(uint8_t *buf,uint8_t len);
 uint8_t UartRece(uint8_t *pbuffer,uint8_t *len);
+void SenseRelase(void);
 #endif

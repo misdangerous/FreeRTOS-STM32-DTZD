@@ -20,7 +20,6 @@
 #include "sim7600ce.h"
 #include "rtc.h"
 #include "at24cxx.h"
-#include "error_display.h"
 /*
  * Register the generic commands that can be used with FreeRTOS+CLI.
  */
@@ -136,14 +135,6 @@ TaskHandle_t TCP_ReconnectSocke_Task_Handler;
 //任务函数
 void vTCP_ReconnectSockeTask( void *pvParameters );
 
-//任务优先级
-#define ErrorDisplay_TASK_PRIO		14
-//任务堆栈大小	
-#define ErrorDisplay_STK_SIZE 		128  
-//任务句柄
-TaskHandle_t ErrorDisplay_Task_Handler;
-//任务函数
-void vErrorDisplayTask( void *pvParameters );
 
 //按键消息队列的数量
 #define MESSAGE_Q_NUM   4   	//发送数据的消息队列的数量 
@@ -269,13 +260,7 @@ void start_task(void *pvParameters)
                 (uint16_t       )TCP_ReconnectSocke_STK_SIZE, 
                 (void*          )NULL,
                 (UBaseType_t    )TCP_ReconnectSocke_TASK_PRIO,
-                (TaskHandle_t*  )&TCP_ReconnectSocke_Task_Handler);
-	xTaskCreate((TaskFunction_t )vErrorDisplayTask,     
-                (const char*    )"ErrorDisplay_Task",   
-                (uint16_t       )ErrorDisplay_STK_SIZE, 
-                (void*          )NULL,
-                (UBaseType_t    )ErrorDisplay_TASK_PRIO,
-                (TaskHandle_t*  )&ErrorDisplay_Task_Handler);						
+                (TaskHandle_t*  )&TCP_ReconnectSocke_Task_Handler);					
     vTaskDelete(StartTask_Handler); //删除开始任务
     taskEXIT_CRITICAL();            //退出临界区
 }

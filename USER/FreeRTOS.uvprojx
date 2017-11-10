@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM3;..\FreeRTOS-Plus-FAT-SL\api;..\FreeRTOS-Plus-FAT-SL\config;..\FreeRTOS-Plus-FAT-SL\fat_sl\common;..\FreeRTOS-Plus-FAT-SL\psp\include;..\FreeRTOS-Plus-FAT-SL\version;..\FreeRTOS-Plus-CLI;..\HARDWARE\SDIO;..\APP\UART_COMMAND;..\HARDWARE\TIMER;..\HARDWARE\DS18B20;..\APP\DS18B20;..\HARDWARE\SENSE_485;..\APP\SENSE_MODBUS;..\APP\EEPROM_SAVE;..\HARDWARE\at24cxx;..\HARDWARE\SIM7600CE;..\APP\SIM7600CE_TCP;..\APP\COMMUNICATION_TCP;..\APP\DATA_REPORT;..\HARDWARE\SWITCH_IO;..\APP\SWITCH;..\HARDWARE\RTC;..\APP\ERROR_DISPLAY</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM3;..\FreeRTOS-Plus-FAT-SL\api;..\FreeRTOS-Plus-FAT-SL\config;..\FreeRTOS-Plus-FAT-SL\fat_sl\common;..\FreeRTOS-Plus-FAT-SL\psp\include;..\FreeRTOS-Plus-FAT-SL\version;..\FreeRTOS-Plus-CLI;..\HARDWARE\SDIO;..\APP\UART_COMMAND;..\HARDWARE\TIMER;..\HARDWARE\DS18B20;..\APP\DS18B20;..\HARDWARE\SENSE_485;..\APP\SENSE_MODBUS;..\APP\EEPROM_SAVE;..\HARDWARE\at24cxx;..\HARDWARE\SIM7600CE;..\APP\SIM7600CE_TCP;..\APP\COMMUNICATION_TCP;..\APP\DATA_REPORT;..\HARDWARE\SWITCH_IO;..\APP\SWITCH;..\HARDWARE\RTC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -752,11 +752,6 @@
               <FileName>Switch_Task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\APP\SWITCH\Switch_Task.c</FilePath>
-            </File>
-            <File>
-              <FileName>error_display.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\ERROR_DISPLAY\error_display.c</FilePath>
             </File>
           </Files>
         </Group>

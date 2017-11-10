@@ -182,7 +182,7 @@ uint8_t UartRece(uint8_t *pbuffer,uint8_t *len)
 	uint8_t i;
 	BaseType_t err=pdFALSE;
 	
-	err=xSemaphoreTake(Sense_RxBinarySemaphore,2000);	//获取信号量
+	err=xSemaphoreTake(Sense_RxBinarySemaphore,1000);	//获取信号量
 	if(err==pdPASS)			//接收到消息
 	{
 		*len = Sense_Modbus.Rece.DataLen;
